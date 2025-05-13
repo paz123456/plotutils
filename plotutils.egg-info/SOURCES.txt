@@ -1,0 +1,13 @@
+README.md
+setup.py
+plotutils/__init__.py
+plotutils/colored_line.py
+plotutils/discrete_cmap.py
+plotutils/figuresize.py
+plotutils/setup_latex.py
+plotutils/watermark.py
+plotutils.egg-info/PKG-INFO
+plotutils.egg-info/SOURCES.txt
+plotutils.egg-info/dependency_links.txt
+plotutils.egg-info/requires.txt
+plotutils.egg-info/top_level.txt

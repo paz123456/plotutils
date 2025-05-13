@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: plotutils
+Version: 0.0.1
+Summary: A collection of functions often used in my thesis plots
+Home-page: https://github.com/philipp666/plotutils
+Author: Philipp Ziegler
+Author-email: ziegler_philipp@live.de
+License: MIT
+Keywords: plotting,matplotlib,numpy,thesis,utilities
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib>=3.0.0
+Requires-Dist: numpy>=1.17.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Plotutils
+
+## Functions:
+1. watermark: takes figure as input and adds specified text (default lower right corner)
+to the figure as watermark. Position, fontsize and alpha value can be specified.
