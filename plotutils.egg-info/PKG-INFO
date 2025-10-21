@@ -1,4 +1,4 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.1
 Name: plotutils
 Version: 0.0.1
 Summary: A collection of functions often used in my thesis plots
@@ -13,17 +13,6 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 Requires-Dist: matplotlib>=3.0.0
 Requires-Dist: numpy>=1.17.0
-Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
-Dynamic: home-page
-Dynamic: keywords
-Dynamic: license
-Dynamic: requires-dist
-Dynamic: requires-python
-Dynamic: summary
 
 # Plotutils
 

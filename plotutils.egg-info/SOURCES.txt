@@ -4,6 +4,8 @@ plotutils/__init__.py
 plotutils/colored_line.py
 plotutils/discrete_cmap.py
 plotutils/figuresize.py
+plotutils/label_along_line.py
+plotutils/legendutils.py
 plotutils/setup_latex.py
 plotutils/watermark.py
 plotutils.egg-info/PKG-INFO
