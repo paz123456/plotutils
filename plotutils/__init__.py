@@ -10,4 +10,13 @@ from .discrete_cmap import discrete_cmap
 from .legendutils import MulticolorCircles, MulticolorHandler, HandlerGradientLine
 
 
-__all__ = ["colored_line", "add_watermark", "set_size", "setup_latex", "discrete_cmap"]
+__all__ = [
+    "colored_line",
+    "add_watermark",
+    "set_size",
+    "setup_latex",
+    "discrete_cmap",
+    "MulticolorCircles",
+    "MulticolorHandler",
+    "HandlerGradientLine",
+]
