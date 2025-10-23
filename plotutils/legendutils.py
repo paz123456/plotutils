@@ -10,6 +10,9 @@ import matplotlib as mpl
 class HandlerGradientLine(HandlerBase):
     """Draw a horizontal gradient line as the legend handle.
         Example:
+    from matplotlib.lines import Line2D
+    from matplotlib.collections import LineCollection
+    from matplotlib.legend_handler import HandlerBase
     # --- make a dummy handle for the gradient entry
     grad_handle = Line2D([], [], label="Dust trajectory (speed)")
 
