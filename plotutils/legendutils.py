@@ -7,6 +7,39 @@ from matplotlib.markers import MarkerStyle
 import matplotlib as mpl
 
 
+class HandlerGradientLine(HandlerBase):
+    """Draw a horizontal gradient line as the legend handle.
+        Example:
+    # --- make a dummy handle for the gradient entry
+    grad_handle = Line2D([], [], label="Dust trajectory (speed)")
+
+    # keep your existing scatter legend entry and append the gradient handle
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(
+        handles + [grad_handle],
+        labels + ["Dust trajectory (speed)"],
+        loc="upper right",
+        handler_map={grad_handle: HandlerGradientLine(cmap="cool", lw=2)},
+    )
+    """
+
+    def __init__(self, cmap="cool", n=256, lw=2, **kwargs):
+        super().__init__(**kwargs)
+        self.cmap = plt.get_cmap(cmap) if isinstance(cmap, str) else cmap
+        self.n = int(n)
+        self.lw = lw
+
+    def create_artists(
+        self, legend, orig_handle, x0, y0, width, height, fontsize, trans
+    ):
+        xs = np.linspace(x0, x0 + width, self.n)
+        y = y0 + 0.5 * height
+        segs = [((xs[i], y), (xs[i + 1], y)) for i in range(self.n - 1)]
+        cols = self.cmap(np.linspace(0, 1, self.n - 1))
+        lc = LineCollection(segs, colors=cols, linewidths=self.lw, transform=trans)
+        return [lc]
+
+
 class MulticolorCircles:
     def __init__(
         self, face_colors, edge_colors=None, face_alpha=1, radius_factor=1, gap=0.4
@@ -89,4 +122,3 @@ class MulticolorHandler:
         patch = orig_handle(width, height)
         handlebox.add_artist(patch)
         return patch
-
